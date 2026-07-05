@@ -1,0 +1,64 @@
+*
+{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+.heading
+{
+    color: white;
+    text-align: center;
+    background-color: black;
+    position: sticky;
+    top:0;
+    z-index: 100;
+   padding: 1rem 0.5rem;
+   
+}
+.heading .htext
+{
+    font-weight: 800;
+    
+
+}
+.userInputForm
+{
+    background: linear-gradient(135deg,rgb(58, 23, 211) 0%,rgb(224, 26, 198) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    min-height: 100vh;
+    gap:2rem;
+}
+.format
+{
+    display: flex;
+    gap:2.5rem;
+    color:white;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.cardformat
+{   padding: 1rem;
+    flex: 1;
+    background-color: rgb(160, 17, 208);
+    width:200px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardformat a
+{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    width: 100px;
+    
+    background-color: black;
+    border-radius:8px;
+}

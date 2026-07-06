@@ -2,7 +2,7 @@ const forms=document.querySelector(".userInputForm")
 const submitbtn=document.querySelector(".search");
 const ressection=document.querySelector(".result");
 const errsection=document.querySelector(".errorarea");
-const errtag=document.createElement("p");
+
 const res_content=document.createElement("div");
 
 let attribs_name=document.createElement("p");
@@ -83,7 +83,7 @@ forms.addEventListener("submit", async e=>{
     }
     catch(err)
     {
-        
+        const errtag=document.createElement("p");
         errtag.textContent=err.message;
         errsection.appendChild(errtag);
     }

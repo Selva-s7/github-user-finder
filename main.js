@@ -3,7 +3,15 @@ const submitbtn=document.querySelector(".search");
 const ressection=document.querySelector(".result");
 const errsection=document.querySelector(".errorarea");
 
-const res_content=document.createElement("div");
+
+forms.addEventListener("submit", async e=>{
+    e.preventDefault();
+    const username=document.querySelector("#username").value;
+    localStorage.setItem("username",username);
+    const url = `https://api.github.com/users/${username}`;
+   ressection.innerHTML="";
+    errsection.innerHTML="";
+    const res_content=document.createElement("div");
 
 let attribs_name=document.createElement("p");
 let attribs_bio=document.createElement("p");
@@ -12,14 +20,6 @@ let attribs_following=document.createElement("p");
 let attribs_location=document.createElement("p");
 let attribs_public_repos=document.createElement("p");
 let attribs_avatar=document.createElement("img");
-forms.addEventListener("submit", async e=>{
-    e.preventDefault();
-    const username=document.querySelector("#username").value;
-    localStorage.setItem("username",username);
-    const url = `https://api.github.com/users/${username}`;
-   ressection.innerHTML="";
-    errsection.innerHTML="";
-    
     const status=document.createElement("p");
     status.textContent="SEARCHING...";
     

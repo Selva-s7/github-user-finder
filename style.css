@@ -4,6 +4,10 @@
     margin:0;
     padding:0;
 }
+body
+{
+    background:linear-gradient(135deg ,rgb(19, 3, 84) 0%,rgb(6, 6, 175) 100%);
+}
 .heading
 {
     color: white;
@@ -46,11 +50,11 @@
 {   padding: 1rem;
     flex: 1;
     background-color: rgb(160, 17, 208);
-    width:200px;
     min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 8px;
 }
 .cardformat a
 {
@@ -58,7 +62,44 @@
     color: white;
     text-align: center;
     width: 100px;
-    
+    transition: color 0.3s ease, tranform 0.3s ease;
     background-color: black;
     border-radius:8px;
+}
+.cardformat a:hover
+{
+    color: green;
+    transform: scale(1.1);
+}
+.ResContent
+{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    background-color: rgb(92, 26, 154);
+    margin-top: 10px;
+}
+.ResContent p
+{
+    color:white;
+    
+}
+.ERROR
+{
+    min-height:100px;
+    background:linear-gradient(135deg, rgb(0, 0, 11),rgb(1, 1, 29));
+    color:red;
+    text-align: center;
+}
+.ERROR p
+{
+    padding-top:1rem ;
+}
+@media (max-width:768px)
+{
+    .format
+    {
+        flex-direction: column;
+
+    }
 }
